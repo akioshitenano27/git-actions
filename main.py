@@ -7,7 +7,7 @@ import requests
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 logger_file_handler = logging.handlers.RotatingFileHandler(
-    "status.log",
+    "status.log", 
     maxBytes=1024 * 1024,
     backupCount=1,
     encoding="utf8",
