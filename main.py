@@ -2,11 +2,11 @@ import logging
 import logging.handlers
 import os
 import requests
+
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 # --- Logging Setup ---
 logger = logging.getLogger(__name__)
@@ -57,7 +57,9 @@ if __name__ == "__main__":
         chrome_options.add_argument(option)
 
     # Use Chromium for better compatibility with GitHub Actions runners
-    service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+    # service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+    # driver = webdriver.Chrome(service=service, options=chrome_options)
+    service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     try:
