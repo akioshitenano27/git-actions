@@ -26,6 +26,20 @@ except KeyError:
 
 if __name__ == "__main__":
     logger.info(f"Token value: {SOME_SECRET}")
+    # Get secrets from Environment Variables
+    token = os.getenv("PUSHOVER_TOKEN")
+    user = os.getenv("PUSHOVER_USER")
+
+    requests.post("https://api.pushover.net/1/messages.json", data={
+        "token": token,
+        "user": user,
+        "message": "Congratulations! you got the winning combinations!",
+        "title": "You won the lotto last tonight!",
+        "url": "https://www.pcso.gov.ph/searchlottoresult.aspx",
+        "url_title": "View Lotto Results!",
+        "priority": 1
+    })
+
 
     r = requests.get('https://weather.talkpython.fm/api/weather/?city=Berlin&country=DE')
     if r.status_code == 200:
