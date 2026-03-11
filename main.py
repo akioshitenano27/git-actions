@@ -84,9 +84,8 @@ if __name__ == "__main__":
         winning_text = winning_numbers_element.text
         
         logger.info(f"Extracted Text from Row 1, Col 2: {winning_text}")
-        print(f"Result: {winning_text}")
+        print(f"Result: {winning_text}") 
 
-        # Example: Send this text via Pushover
         if winning_text:
             send_notification(token, user, "Latest 6/45 Result", f"The winning numbers are: {winning_text}")
         
