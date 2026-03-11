@@ -5,3 +5,7 @@
 2026-03-11 07:52:47,016 - __main__ - INFO - Successfully accessed page. Title: Access Denied
 2026-03-11 07:52:47,159 - __main__ - INFO - Pushover sent. Status: 200
 2026-03-11 07:52:47,214 - __main__ - INFO - Driver closed.
+2026-03-11 07:57:44,414 - __main__ - INFO - Accessing PCSO/Target Website...
+2026-03-11 07:57:45,887 - __main__ - INFO - Successfully accessed page. Title: Lotto Result Today – PCSO Official Lotto Results
+2026-03-11 07:57:46,171 - __main__ - INFO - Pushover sent. Status: 200
+2026-03-11 07:57:46,229 - __main__ - INFO - Driver closed.
