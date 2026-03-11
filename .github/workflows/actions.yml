@@ -2,8 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    # This triggers the workflow every 5 minutes
-    - cron: '*/15 * * * *'
+    - cron: '0 22 * * *'
   workflow_dispatch:
   
 jobs:
