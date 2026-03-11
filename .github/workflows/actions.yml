@@ -2,7 +2,7 @@ name: run main.py
 
 on:
   schedule:
-    - cron: '*/2 * * * *' # At 00:00 on Monday
+    - cron: '*/10 * * * *' # At 00:00 on Monday
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
           
       - name: commit files
         run: |
-          git config --local user.email "action@github.com"
+          git config --local user.email "akioshite27@gmail.com"
           git config --local user.name "GitHub Action"
           git add -A
           git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
