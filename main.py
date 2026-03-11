@@ -17,20 +17,16 @@ logger_file_handler.setFormatter(formatter)
 logger.addHandler(logger_file_handler)
 
 try:
-    SOME_SECRET = os.environ["SOME_SECRET"]
-except KeyError:
-    SOME_SECRET = "Token not available!"
-    #logger.info("Token not available!")
-    #raise
-
-
-if __name__ == "__main__":
-    logger.info(f"Token value: {SOME_SECRET}")
-    # Get secrets from Environment Variables
     token = os.getenv("PUSHOVER_TOKEN")
     user = os.getenv("PUSHOVER_USER")
+    
+except KeyError:
+    logger.info("PUSHOVER_TOKEN not available!")
+    logger.info("PUSHOVER_USER not available!")
+    raise
 
-    requests.post("https://api.pushover.net/1/messages.json", data={
+if __name__ == "__main__":
+    r = requests.post("https://api.pushover.net/1/messages.json", data={
         "token": token,
         "user": user,
         "message": "Congratulations! you got the winning combinations!",
@@ -40,9 +36,6 @@ if __name__ == "__main__":
         "priority": 1
     })
 
-
-    r = requests.get('https://weather.talkpython.fm/api/weather/?city=Berlin&country=DE')
     if r.status_code == 200:
         data = r.json()
-        temperature = data["forecast"]["temp"]
-        logger.info(f'Weather in Berlin: {temperature}')
+        logger.info(f'The status code was {r.status_code}')
