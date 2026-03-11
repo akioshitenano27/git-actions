@@ -2,6 +2,7 @@ import logging
 import logging.handlers
 import os
 import requests
+import time
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -27,7 +28,7 @@ def send_notification(token, user, title, message):
         "user": user,
         "message": message,
         "title": title,
-        "url": "https://www.pcso.gov.ph/searchlottoresult.aspx",
+        "url": "https://www.lottopcso.com/lotto-result-today-summary/",
         "url_title": "View Lotto Results!",
         "priority": 1
     })
@@ -64,7 +65,7 @@ if __name__ == "__main__":
 
     try:
         logger.info("Accessing PCSO/Target Website...")
-        driver.get('https://www.pcso.gov.ph/searchlottoresult.aspx')
+        driver.get('https://www.lottopcso.com/lotto-result-today-summary/')
         
         # Log the title to verify access
         page_title = driver.title
