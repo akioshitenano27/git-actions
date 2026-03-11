@@ -28,9 +28,12 @@ jobs:
       - name: Remove default Chromium
         run: sudo apt purge chromium-browser
 
-      - name: Install a new Chromium
-        run: sudo apt install -y chromium-browser
-
+      - name: Install Google Chrome 114
+        run: |
+          wget --no-verbose -O /tmp/chrome.deb https://mirror.cs.uchicago.edu/google-chrome/pool/main/g/google-chrome-stable/google-chrome-stable_114.0.5735.90-1_amd64.deb
+          sudo apt install -y /tmp/chrome.deb
+          google-chrome --version
+          
       - name: Install all necessary packages
         run: pip install requests beautifulsoup4 pandas webdriver-manager selenium
         
