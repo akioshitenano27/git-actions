@@ -13,3 +13,9 @@
 2026-03-11 08:09:27,518 - __main__ - INFO - Successfully accessed page. Title: Lotto Result Today – PCSO Official Lotto Results
 2026-03-11 08:09:27,743 - __main__ - INFO - Pushover sent. Status: 200
 2026-03-11 08:09:27,802 - __main__ - INFO - Driver closed.
+2026-03-11 08:14:26,772 - __main__ - INFO - Accessing PCSO/Target Website...
+2026-03-11 08:14:29,299 - __main__ - INFO - Successfully accessed page. Title: 6/45 Lotto Result Today - Official PCSO Lotto Results
+2026-03-11 08:14:29,320 - __main__ - INFO - Extracted Text from Row 1, Col 2: 23-24-03-38-04-21
+2026-03-11 08:14:29,715 - __main__ - INFO - Pushover sent. Status: 200
+2026-03-11 08:14:29,886 - __main__ - INFO - Pushover sent. Status: 200
+2026-03-11 08:14:29,946 - __main__ - INFO - Driver closed.
